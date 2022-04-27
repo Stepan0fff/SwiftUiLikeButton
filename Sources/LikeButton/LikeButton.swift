@@ -8,13 +8,14 @@
 import SwiftUI
 
 public struct LikeButton: View {
-    @Binding public var isLiked: Bool
+    
     @State private var opacity = 0.0
     @State private var scale = 1.0
+    @Binding public var isLiked: Bool
     
     public init(isLiked: Binding<Bool>) {
             self._isLiked = isLiked
-        }
+    }
     
     public var body: some View {
         ZStack{
