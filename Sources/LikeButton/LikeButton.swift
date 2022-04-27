@@ -21,14 +21,14 @@ public struct LikeButton: View {
         ZStack{
             Group {
                 Image(systemName: "heart.fill")
-                    .opacity(isLiked ? 1 : 0.2)
+                    .opacity(isLiked ? 1 : 0.6)
                     .animation(.easeOut, value: self.isLiked)
             }
             .imageScale(.large)
             .overlay(
                 Group {
-                    DotsView(count: 7, radius: 20, speed: 0.1, scale: self.isLiked ? 0.1 : 0.65)
-                    DotsView(count: 7, radius: 25, speed: 0.1, scale: self.isLiked ? 0.1 : 0.2)
+                    DotsView(count: 7, radius: 20, speed: 0.2, scale: self.isLiked ? 0.1 : 0.85)
+                    DotsView(count: 7, radius: 25, speed: 0.2, scale: self.isLiked ? 0.1 : 0.4)
                         .rotationEffect(Angle(degrees: 25.7))
                 }
                 .opacity(self.opacity)
