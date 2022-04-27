@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LikeButton: View {
+public struct LikeButton: View {
     @Binding public var isLiked: Bool
     @State private var opacity = 0.0
     @State private var scale = 1.0
@@ -16,7 +16,7 @@ struct LikeButton: View {
             self._isLiked = isLiked
         }
     
-    var body: some View {
+    public var body: some View {
         ZStack{
             Group {
                 Image(systemName: "heart.fill")
