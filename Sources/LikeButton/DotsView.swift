@@ -16,8 +16,10 @@ struct DotsView: View {
     var body: some View {
         ZStack{
             ForEach(0 ..< count, id: \.self){ i in
-                Circle()
-                    .fill(.red)
+                Image(systemName: "sparkle")
+                    .rotationEffect(Angle(degrees: .random(in: 0 ... 360)), anchor: .center)
+                    .foregroundColor(Color.red)
+                    .imageScale(.large)
                     .frame(width: 10)
                     .scaleEffect(self.scale)
                     .animation(.linear(duration: self.speed), value: self.scale)
